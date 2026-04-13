@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import logoRhino from "./imports/logo-rhino.png";
+import logoRhino from "../imports/logo-rhino.png";
 import {
   Phone,
   MapPin,
