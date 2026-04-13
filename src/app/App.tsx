@@ -22,7 +22,7 @@ export default function App() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/logoRhino.png"
+                src="/logo-rhino.png"
                 alt="Rhino Machinery Parts Logo"
                 className="h-20 lg:h-16 w-auto"
               />
@@ -516,7 +516,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
               <img
-                src="//logoRhino.png"
+                src="/logo-rhino.png"
                 alt="Rhino Machinery Parts Logo"
                 className="h-20 w-auto mb-3"
               />
