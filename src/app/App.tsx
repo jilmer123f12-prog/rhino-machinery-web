@@ -170,6 +170,114 @@ export default function App() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl lg:text-6xl font-bold text-black mb-6">
+              {/* Vitrina de Productos y Catálogo */}
+      <section className="py-24 bg-white border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="max-w-2xl"
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4">
+                Nuestros Productos
+              </h2>
+              <p className="text-lg text-zinc-600">
+                Piezas de precisión diseñadas para el trabajo pesado. Selecciona una categoría para cotizar o descarga nuestro catálogo completo.
+              </p>
+            </motion.div>
+            
+            {/* Botón de Descarga del Catálogo */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href="/catalogo-rhino.pdf"
+                download
+                className="inline-flex items-center gap-2 border-2 border-black text-black hover:bg-black hover:text-yellow-400 px-8 py-4 font-bold rounded transition-all duration-300"
+              >
+                <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Descargar Catálogo (PDF)
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Grilla de Productos (Vitrina) */}
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* Producto 1: Filtros */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-zinc-50"
+            >
+              <div className="aspect-video bg-zinc-200 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Filtros Caterpillar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-black mb-3">FILTROS CATERPILLAR</h3>
+                <p className="text-zinc-600 mb-6 text-sm line-clamp-3">
+                  Retienen partículas contaminantes, manteniendo el sistema limpio y prolongando la vida útil de su maquinaria pesada.
+                </p>
+                <a href="https://wa.me/51967385875?text=Hola,%20deseo%20cotizar%20Filtros%20Caterpillar" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-black py-3 font-bold rounded transition-colors">
+                  Cotizar Aquí
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Producto 2: Inyectores */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-zinc-50"
+            >
+              <div className="aspect-video bg-zinc-200 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1617064287848-18eeb678dd3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Inyectores" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-black mb-3">INYECTORES</h3>
+                <p className="text-zinc-600 mb-6 text-sm line-clamp-3">
+                  Inyección de precisión para maximizar la potencia del motor y optimizar el consumo de combustible.
+                </p>
+                <a href="https://wa.me/51967385875?text=Hola,%20deseo%20cotizar%20Inyectores" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-black py-3 font-bold rounded transition-colors">
+                  Cotizar Aquí
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Producto 3: Rodamientos */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-zinc-50"
+            >
+              <div className="aspect-video bg-zinc-200 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Sistema de Rodamiento" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-black mb-3">SISTEMA DE RODAMIENTO</h3>
+                <p className="text-zinc-600 mb-6 text-sm line-clamp-3">
+                  Sistemas completos diseñados para soportar altas cargas y garantizar la movilidad continua de su equipo.
+                </p>
+                <a href="https://wa.me/51967385875?text=Hola,%20deseo%20cotizar%20Sistemas%20de%20Rodamiento" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-black py-3 font-bold rounded transition-colors">
+                  Cotizar Aquí
+                </a>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
               Servicios Especializados
             </h2>
             <p className="text-xl text-zinc-600 max-w-2xl mx-auto">
